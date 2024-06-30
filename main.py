@@ -5,6 +5,9 @@ import matplotlib.cm as cm
 
 from RungeKutta import RK4
 from PredatorPrey import PredatorPrey
+import os
+
+os.makedirs("build", exist_ok=True)
 
 pp = PredatorPrey(1.5, 0.5, 1, 0.5)
 ex, ey = pp.equilibrum()
@@ -53,7 +56,7 @@ ax.set_xlim(0, np.max(x) * 1.1)
 ax.set_ylim(0, np.max(y) * 1.1)
 ax.legend()
 fig.tight_layout(pad=0.2)
-fig.savefig("presasxpredador.png", dpi=300)
+fig.savefig("build/presasxpredador.png", dpi=300)
 
 fig, ax = plt.subplots()
 
@@ -77,4 +80,4 @@ ax.set_ylabel("Presa, Predador")
 ax.legend()
 
 fig.tight_layout(pad=0.2)
-fig.savefig("tempo.png", dpi=300)
+fig.savefig("build/tempo.png", dpi=300)
