@@ -99,12 +99,17 @@ ax.plot(
     label=f"Presas",
     color="#ff6961",
 )
+
+ax.scatter([0], [x[-1][0]], label=f"{(x[-1][0])}", marker="^", color="#ff6961")
+
 ax.plot(
     t,
     y[-1],
     label=f"Predadores",
     color="#A7C7E7",
 )
+
+ax.scatter([0], [y[-1][0]], label=f"{(y[-1][0])}", marker="o", color="#A7C7E7")
 
 ax.set_xlabel("Tempo")
 ax.set_ylabel("Presa, Predador")
